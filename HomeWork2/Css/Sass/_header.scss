@@ -1,0 +1,43 @@
+#header {
+    height: 475px;
+    width: 100%;
+    background-attachment: scroll;
+    margin-bottom: 30px;
+    #backgroundimg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 550px;
+        width: 100%;
+        background: no-repeat center center;
+        background-size: cover;
+        background-attachment: scroll;
+
+        @include DefaultCenter;
+
+        #backgroundEffect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $BackGroundeffect-color;
+        }
+
+        #container{
+            width: 50%;
+            height: 50%;
+            color: $DefaultText-color;
+            position: relative;
+            @include DefaultCenter;
+            flex-direction: column;
+            h1{
+                font-size: 100px;
+            }
+            span{
+                font-size: 25px;
+            }
+        }
+    }
+
+}

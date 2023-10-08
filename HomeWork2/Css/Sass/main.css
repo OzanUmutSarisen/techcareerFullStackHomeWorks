@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+nav {
+  width: 100%;
+  height: 75px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+nav #container {
+  height: 100%;
+  width: 1110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav #container a {
+  position: relative;
+  color: white;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 35px;
+}
+nav #container a:hover {
+  color: rgb(236, 236, 236);
+}
+nav #container #sections {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav #container #sections a {
+  font-size: 22px;
+  margin-left: 40px;
+}
+
+#header {
+  height: 475px;
+  width: 100%;
+  background-attachment: scroll;
+  margin-bottom: 30px;
+}
+#header #backgroundimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 550px;
+  width: 100%;
+  background: no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header #backgroundimg #backgroundEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 37, 41, 0.4039215686);
+}
+#header #backgroundimg #container {
+  width: 50%;
+  height: 50%;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#header #backgroundimg #container h1 {
+  font-size: 100px;
+}
+#header #backgroundimg #container span {
+  font-size: 25px;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+#main #posts {
+  width: 730px;
+  box-sizing: border-box;
+}
+#main #posts #title {
+  text-decoration: none;
+}
+#main #posts #title h1 {
+  font-size: 50px;
+  color: black;
+}
+#main #posts #title h2 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #212529;
+}
+#main #posts #title:hover h1 {
+  color: #0085A1;
+}
+#main #posts #title:hover h2 {
+  color: #0085A1;
+}
+#main #posts span {
+  font-size: 20px;
+  color: #6c757d;
+}
+#main #posts p {
+  line-height: 1.5;
+  font-size: 25px;
+  margin: 30px 0;
+}
+#main #message {
+  width: 730px;
+  box-sizing: border-box;
+}
+#main #message #group,
+#main #message #groupM {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-top: 15px;
+}
+#main #message #group #text,
+#main #message #groupM #text {
+  font-size: 25px;
+  border: none;
+  outline: 0;
+}
+#main #message #groupM #text {
+  height: 150px;
+  resize: none;
+}
+#main hr {
+  margin-top: 35px;
+  border-style: none;
+  border: none;
+  width: 730px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 1px;
+}
+#main #buttonBoxSend {
+  width: 730px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: left;
+}
+#main #buttonBoxSend #button {
+  text-decoration: none;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  background-color: #0085A1;
+  border-color: #0085A1;
+}
+#main #buttonBoxSend #button:hover {
+  background-color: #025a6c;
+  border-color: #025a6c;
+}
+#main #buttonBox {
+  width: 730px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: right;
+}
+#main #buttonBox #button {
+  text-decoration: none;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  background-color: #0085A1;
+  border-color: #0085A1;
+}
+#main #buttonBox #button:hover {
+  background-color: #025a6c;
+  border-color: #025a6c;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+}
+footer #icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 25px;
+  color: white;
+}
+footer #icons #backgroundicon {
+  margin-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(56, 55, 55);
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+footer #icons #backgroundicon:hover {
+  background-color: #0085A1;
+}/*# sourceMappingURL=main.css.map */

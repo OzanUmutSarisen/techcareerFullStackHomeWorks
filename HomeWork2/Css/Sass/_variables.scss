@@ -1,0 +1,53 @@
+//Background Colors
+$Primary-color: white;
+$Secondary-color : #6c757d;
+$BackGroundeffect-color : #21252967;
+$BackGroundButton-color:#0085A1;
+$BackGroundButtonHover-color:#025a6c;
+
+//Text Colors
+$DefaultText-color: white;
+$HoverText-color: rgb(236, 236, 236);
+$PostH1-Color:black;
+$PostH2-Color:#212529;
+$PostSpan-Color:#6c757d;
+$PosttitleHover-Color:#0085A1;
+
+//hr Color
+$HR-Color:rgba(0,0,0,0.1);
+
+
+//Background img
+$Home-img: url(https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/blob/master/img/bg-index.jpg?raw=true);
+$About-img: url(https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/blob/master/img/bg-index.jpg?raw=true);
+$Post-img: url('/startbootstrap-clean-blog-jekyll/img/bg-post.jpg');
+$Contact-img: url('/startbootstrap-clean-blog-jekyll/img/bg-contact.jpg');
+
+//Default mixin
+@mixin DefaultBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin DefaultCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin Button{
+    #button {
+        text-decoration: none;
+        padding: 15px 25px;
+        font-size: 20px;
+        font-weight: 800;
+        color: $Primary-color;
+        background-color: $BackGroundButton-color;
+        border-color: $BackGroundButton-color;
+    }
+    #button:hover{
+        background-color: $BackGroundButtonHover-color;
+        border-color: $BackGroundButtonHover-color;
+    }
+}

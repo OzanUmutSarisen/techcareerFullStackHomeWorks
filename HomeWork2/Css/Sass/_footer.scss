@@ -1,0 +1,31 @@
+footer {
+    @include DefaultCenter;
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+
+    #icons {
+        @include DefaultCenter;
+        margin-bottom: 50px;
+        
+
+        font-size: 25px;
+        color: $DefaultText-color;
+
+        #backgroundicon {
+            margin-right: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(56, 55, 55);
+            border-radius: 100%;
+            width: 50px;
+            height: 50px;
+
+        }
+
+        #backgroundicon:hover {
+            background-color: $BackGroundButton-color;
+        }
+    }
+}

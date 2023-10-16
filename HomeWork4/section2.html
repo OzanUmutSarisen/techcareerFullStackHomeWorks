@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div>Count of USA</div>
+    <span id="count"></span>
+</body>
+
+<script>
+    var span = document.getElementById("count");
+    var count = 0;
+    fetch('https://northwind.vercel.app/api/orders')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(element => {
+                if (element.shipAddress.country == "USA") {
+                    count++;
+                }
+            });
+            span.textContent = count.toString();
+        })
+
+
+</script>
+
+</html>

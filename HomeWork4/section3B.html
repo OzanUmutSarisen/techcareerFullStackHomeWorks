@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+</body>
+
+<script>
+
+var span = document.getElementById("count");
+    var count = 0;
+    fetch('https://northwind.vercel.app/api/orders')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(element => {
+                var redate = new Date(element.requiredDate);
+                var spdate = new Date(element.shippedDate);
+
+                if (spdate > redate) {
+                    console.log(element);
+                }
+            });
+        })
+
+</script>
+
+</html>

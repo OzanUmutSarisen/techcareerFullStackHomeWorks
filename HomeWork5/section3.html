@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <ul id="ul">
+
+    </ul>
+</body>
+
+<script>
+    var ul = document.getElementById("ul");
+
+    fetch('https://northwind.vercel.app/api/suppliers')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(element => {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(element.companyName));
+                ul.appendChild(li);
+            });
+        })
+
+
+</script>
+
+
+</html>

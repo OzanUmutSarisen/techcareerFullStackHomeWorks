@@ -9,18 +9,21 @@
 </head>
 
 <body>
+    <ul id="ul">
+
+    </ul>
 </body>
 
 <script>
     var ul = document.getElementById("ul");
 
-    fetch('https://northwind.vercel.app/api/suppliers')
+    fetch('https://northwind.vercel.app/api/orders')
         .then(res => res.json())
         .then(data => {
             data.forEach(element => {
-                if(element.companyName.startsWith('M')){
-                    console.log(element);
-                }
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(element.customerId));
+                ul.appendChild(li);
             });
         })
 

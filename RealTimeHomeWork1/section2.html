@@ -9,18 +9,18 @@
 </head>
 
 <body>
-    <div>Count of Japan Suppliers</div>
+    <div>Count of USA</div>
     <span id="count"></span>
 </body>
 
 <script>
     var span = document.getElementById("count");
     var count = 0;
-    fetch('https://northwind.vercel.app/api/suppliers')
+    fetch('https://northwind.vercel.app/api/orders')
         .then(res => res.json())
         .then(data => {
             data.forEach(element => {
-                if (element.address.country == "Japan") {
+                if (element.shipAddress.country == "USA") {
                     count++;
                 }
             });

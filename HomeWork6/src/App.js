@@ -1,10 +1,10 @@
-import SuppliersTable from "./homeWork/SuppliersTable"
+import ProductsGridTable from "./homeWork/ProductsGridTable"
 
 
 
 function App(){
   return <>
-    <SuppliersTable/>
+    <ProductsGridTable></ProductsGridTable>
     </>
 }
 

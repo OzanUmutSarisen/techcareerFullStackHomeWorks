@@ -1,18 +1,18 @@
 import { DataGrid } from '@mui/x-data-grid'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { darken, lighten, styled } from '@mui/material/styles';
+import {styled } from '@mui/material/styles';
 
 
-function SuppliersTable() {
-    const [suppliers, setsuppliers] = useState([])
+function ProductsGridTable() {
+    const [products1, setproducts] = useState([])
 
     useEffect(() => {
 
         axios.get('https://northwind.vercel.app/api/products')
             .then(res => {
                 console.log(res);
-                setsuppliers(res.data)
+                setproducts(res.data)
             })
 
     }, [])
@@ -41,7 +41,7 @@ function SuppliersTable() {
                 axios.get('https://northwind.vercel.app/api/products')
                     .then(res => {
                         console.log(res);
-                        setsuppliers(res.data)
+                        setproducts(res.data)
                     })
             })
     };
@@ -56,11 +56,11 @@ function SuppliersTable() {
     return (<>
         <StyledDataGrid
             columns={columns}
-            rows={suppliers}
+            rows={products1}
             getRowClassName={(params) => `backGround--${params.row.unitsInStock}`}
         />
     </>
     )
 }
 
-export default SuppliersTable
+export default ProductsGridTable
